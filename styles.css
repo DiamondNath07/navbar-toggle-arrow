@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-font: Arial, sans-serif;
+  --text-col: ;
+  --bg-blue: rgb(7, 70, 207);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg-blue);
+  min-height: 8vh;
+  align-items: center;
+}
+
+.logo {
+  font-size: 16px;
+  font-family: var(--text-font);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.navslide {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-arrows {
+  display: none;
+}
+
+.navlinks {
+  display: flex;
+}
+
+.navlinks li {
+  list-style: none;
+  padding-right: 15px;
+}
+
+.navlinks li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  font-family: var(--text-font);
+}
+
+.menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navlinks {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    top: 8vh;
+    height: 92vh;
+    width: 50%;
+    background-color: var(--bg-blue);
+    align-items: center;
+    transition: 0.8s ease-in;
+    transform: translateX(100%);
+  }
+
+  .navlinks li {
+    padding: 50px 0;
+  }
+
+  .navlinks li a {
+    font-size: 20px;
+    text-shadow: 10px 2px 40px #fff;
+  }
+
+  .navslide {
+    display: flex;
+  }
+
+  .nav-arrows {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 8vh;
+    height: 92vh;
+    width: 50%;
+    /* background-color: var(--bg-blue); */
+    text-align: center;
+    transition: 0.8s ease-in;
+    transform: translateX(-100%);
+  }
+
+  .nav-arrows li {
+    padding: 50px 0;
+    list-style: none;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .menu-bar div {
+    display: block;
+    width: 15px;
+    height: 1px;
+    padding: 1px 0;
+    background-color: #fff;
+    margin-top: 3px;
+  }
+}
+
+.show-navlinks {
+  transform: translateX(0%);
+}
+
+.show-navarrows {
+  transform: translateX(0%);
+}
